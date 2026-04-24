@@ -1,0 +1,1226 @@
+/* ============================================================
+   KAMILLA — ARTIST PORTFOLIO STYLESHEET
+   style.css
+   ============================================================
+
+   TABLE OF CONTENTS
+   1. Custom Properties (tokens)
+   2. Reset & Base
+   3. Typography
+   4. Layout Utilities
+   5. Navigation
+   6. Section Shared Styles
+   7. About Section
+   8. Fine Art — Category Grid
+   9. Fine Art — Gallery Panel
+  10. Fine Art — Artwork Cards
+  11. Theatre Section
+  12. Film Section
+  13. Exhibitions Section
+  14. Contact Section
+  15. Footer
+  16. Lightbox / Modal
+  17. Vimeo Embeds
+  18. Buttons
+  19. Placeholder States (when images are missing)
+  20. Responsive — Tablet
+  21. Responsive — Mobile
+  ============================================================ */
+
+/* ============================================================
+   1. CUSTOM PROPERTIES
+   ============================================================ */
+:root {
+  /* Colors */
+  --color-bg:        #faf9f7;     /* warm off-white background */
+  --color-bg-alt:    #f3f1ee;     /* slightly darker off-white for alternating sections */
+  --color-text:      #1a1a18;     /* near-black text */
+  --color-text-muted:#6b6b66;     /* muted/secondary text */
+  --color-divider:   #e0ddd8;     /* subtle warm gray divider */
+  --color-accent:    #1a1a18;     /* accent = dark (keeps it monochrome) */
+  --color-link:      #1a1a18;
+  --color-link-hover:#6b6b66;
+
+  /* Typography */
+  --font-serif:    'Georgia', 'Times New Roman', serif;
+  --font-sans:     'Helvetica Neue', 'Arial', sans-serif;
+
+  /* Spacing scale */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  2rem;
+  --space-lg:  4rem;
+  --space-xl:  7rem;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-pad: 2rem;
+
+  /* Nav */
+  --nav-height: 64px;
+
+  /* Transitions */
+  --transition: 0.25s ease;
+
+  /* Radius */
+  --radius: 2px;
+}
+
+/* ============================================================
+   2. RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  /* Offset for sticky nav so anchors land correctly */
+  scroll-padding-top: calc(var(--nav-height) + 1.5rem);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Focus ring — accessible but minimal */
+:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 3px;
+}
+
+/* ============================================================
+   3. TYPOGRAPHY
+   ============================================================ */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
+h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); }
+
+p {
+  max-width: 68ch;
+}
+
+/* ============================================================
+   4. LAYOUT UTILITIES
+   ============================================================ */
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.section {
+  padding-block: var(--space-xl);
+}
+
+/* Alternating section backgrounds */
+.section--about,
+.section--theatre,
+.section--exhibitions {
+  background-color: var(--color-bg);
+}
+
+.section--fine-art,
+.section--film,
+.section--contact {
+  background-color: var(--color-bg-alt);
+}
+
+/* Divider line between sections */
+.section + .section {
+  border-top: 1px solid var(--color-divider);
+}
+
+/* ============================================================
+   5. NAVIGATION
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-divider);
+  height: var(--nav-height);
+}
+
+.nav {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.nav-logo {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav-logo:hover {
+  color: var(--color-text);
+  opacity: 0.7;
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  align-items: center;
+}
+
+.nav-links a {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  transition: color var(--transition);
+  white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: var(--color-text);
+}
+
+/* Mobile hamburger toggle */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 6px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background-color: var(--color-text);
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+/* Nav open state */
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* ============================================================
+   6. SECTION SHARED STYLES
+   ============================================================ */
+.section-title {
+  font-family: var(--font-serif);
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+}
+
+.section-intro {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  margin-bottom: var(--space-lg);
+  max-width: 60ch;
+}
+
+/* ============================================================
+   7. ABOUT SECTION
+   ============================================================ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.about-text {
+  padding-top: var(--space-sm);
+}
+
+.about-name {
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.about-tagline {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.about-bio {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+  max-width: 58ch;
+}
+
+.about-statement {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  border-left: 2px solid var(--color-divider);
+  padding-left: var(--space-md);
+  margin-bottom: var(--space-md);
+  max-width: 50ch;
+}
+
+.about-portrait {
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-md));
+}
+
+.portrait-img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  filter: grayscale(10%);
+}
+
+/* Portrait placeholder when image is missing */
+.portrait-placeholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: var(--color-divider);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portrait-placeholder::after {
+  content: 'Portrait';
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   8. FINE ART — CATEGORY GRID
+   ============================================================ */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+  transition: transform var(--transition);
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+}
+
+.category-card__image {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: var(--color-divider);
+  margin-bottom: var(--space-sm);
+}
+
+.category-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.category-card:hover .category-card__image img {
+  transform: scale(1.03);
+}
+
+.category-card__body {
+  padding-block: var(--space-xs);
+}
+
+.category-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.category-card__desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+  max-width: 30ch;
+}
+
+/* ============================================================
+   9. FINE ART — GALLERY PANEL
+   ============================================================ */
+.gallery-panel {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-divider);
+  animation: fadeSlideIn 0.3s ease both;
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.gallery-panel__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.gallery-panel__header h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+}
+
+.gallery-close {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  transition: color var(--transition);
+}
+
+.gallery-close:hover {
+  color: var(--color-text);
+}
+
+/* Responsive masonry-style grid using CSS columns */
+.gallery-grid {
+  columns: 3;
+  column-gap: var(--space-sm);
+}
+
+.gallery-grid .artwork-card {
+  break-inside: avoid;
+  margin-bottom: var(--space-sm);
+}
+
+/* ============================================================
+  10. FINE ART — ARTWORK CARDS
+   ============================================================ */
+.artwork-card {
+  cursor: pointer;
+  display: block;
+  background: none;
+  border: none;
+  text-align: left;
+  transition: opacity var(--transition);
+}
+
+.artwork-card:hover {
+  opacity: 0.85;
+}
+
+.artwork-card__img-wrap {
+  overflow: hidden;
+  background-color: var(--color-divider);
+  margin-bottom: 0.5rem;
+}
+
+.artwork-card__img-wrap img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.artwork-card:hover .artwork-card__img-wrap img {
+  transform: scale(1.03);
+}
+
+.artwork-card__caption {
+  padding-bottom: 0.25rem;
+}
+
+.artwork-title {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.artwork-meta {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+  11. THEATRE SECTION
+   ============================================================ */
+
+/* Discipline tabs */
+.discipline-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--color-divider);
+  margin-bottom: var(--space-lg);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.discipline-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tab-btn:hover {
+  color: var(--color-text);
+}
+
+.tab-btn--active,
+.tab-btn[aria-selected="true"] {
+  color: var(--color-text);
+  border-bottom-color: var(--color-text);
+}
+
+.tab-panel {
+  animation: fadeSlideIn 0.25s ease both;
+}
+
+/* Theatre / Project grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.project-card__media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--color-divider);
+}
+
+.project-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-card__media img {
+  transform: scale(1.03);
+}
+
+.project-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+}
+
+.project-card__meta {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.project-card__desc {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* ============================================================
+  12. FILM SECTION
+   ============================================================ */
+.film-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.film-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+/* Alternate layout: odd cards have video on right */
+.film-card:nth-child(even) {
+  direction: rtl;
+}
+.film-card:nth-child(even) > * {
+  direction: ltr;
+}
+
+.film-card__video {
+  background-color: var(--color-divider);
+}
+
+.film-card__stills {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--color-divider);
+}
+
+.film-still {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.film-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  justify-content: center;
+}
+
+.film-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+}
+
+.film-card__meta {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.film-card__desc {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  max-width: 50ch;
+}
+
+/* ============================================================
+  13. EXHIBITIONS SECTION
+   ============================================================ */
+.exhibition-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  list-style: none;
+  counter-reset: none;
+}
+
+.exhibition-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: var(--space-md);
+  padding-block: var(--space-md);
+  border-bottom: 1px solid var(--color-divider);
+  align-items: baseline;
+}
+
+.exhibition-item:first-child {
+  border-top: 1px solid var(--color-divider);
+}
+
+.exhibition-item__year {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  padding-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.exhibition-item__title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: normal;
+  margin-bottom: 0.2rem;
+}
+
+.exhibition-item__venue {
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.exhibition-item__desc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  max-width: 64ch;
+}
+
+.exhibition-item__photo {
+  margin-top: var(--space-sm);
+}
+
+.exhibition-item__photo img {
+  max-height: 300px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ============================================================
+  14. CONTACT SECTION
+   ============================================================ */
+.contact-inner {
+  max-width: 640px;
+}
+
+.contact-intro {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+  max-width: 52ch;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contact-link {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-divider);
+  padding-bottom: var(--space-sm);
+  transition: opacity var(--transition);
+  display: block;
+}
+
+.contact-link:hover {
+  opacity: 0.6;
+  color: var(--color-text);
+}
+
+/* Contact form styles (if enabled) */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.form-group input,
+.form-group textarea {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--color-divider);
+  padding: 0.6rem 0;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--color-text);
+  outline: none;
+  transition: border-color var(--transition);
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: var(--color-text);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ============================================================
+  15. FOOTER
+   ============================================================ */
+.site-footer {
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-divider);
+  padding-block: var(--space-md);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.footer-inner p {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  max-width: none;
+}
+
+/* ============================================================
+  16. LIGHTBOX / MODAL
+   ============================================================ */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 10, 8, 0.92);
+  z-index: 200;
+  animation: overlayIn 0.2s ease both;
+}
+
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 201;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  animation: fadeSlideIn 0.25s ease both;
+}
+
+.lightbox__content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.lightbox__img {
+  max-width: 85vw;
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox__caption {
+  text-align: center;
+  color: #e0ddd8;
+}
+
+.lightbox__title {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: #faf9f7;
+  max-width: none;
+}
+
+.lightbox__meta {
+  font-size: 0.82rem;
+  color: #aaa;
+  letter-spacing: 0.04em;
+  max-width: none;
+}
+
+.lightbox__close {
+  position: fixed;
+  top: var(--space-md);
+  right: var(--space-md);
+  font-size: 1.2rem;
+  color: #e0ddd8;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.4rem;
+  transition: color var(--transition);
+  z-index: 202;
+}
+
+.lightbox__close:hover { color: #fff; }
+
+.lightbox__prev,
+.lightbox__next {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #e0ddd8;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-sm);
+  transition: color var(--transition);
+  z-index: 202;
+  line-height: 1;
+}
+
+.lightbox__prev { left: var(--space-md); }
+.lightbox__next { right: var(--space-md); }
+.lightbox__prev:hover,
+.lightbox__next:hover { color: #fff; }
+
+/* ============================================================
+  17. VIMEO EMBEDS
+   ============================================================ */
+/* Responsive aspect-ratio wrapper */
+.vimeo-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #0a0a08;
+  overflow: hidden;
+  margin-top: var(--space-sm);
+}
+
+.vimeo-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Placeholder shown when Vimeo ID is not yet set */
+.vimeo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background-color: #0a0a08;
+  color: #666;
+  text-align: center;
+  padding: var(--space-md);
+}
+
+.vimeo-placeholder p {
+  max-width: none;
+  font-size: 0.9rem;
+}
+
+.vimeo-hint {
+  font-size: 0.75rem !important;
+  color: #444 !important;
+  font-style: italic;
+}
+
+/* Larger embed for film cards */
+.vimeo-embed--film {
+  aspect-ratio: 16 / 9;
+}
+
+/* ============================================================
+  18. BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  border-radius: var(--radius);
+}
+
+.btn--outline {
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  padding: 0.65rem 1.5rem;
+  background: none;
+}
+
+.btn--outline:hover {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+.btn--primary {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  padding: 0.75rem 2rem;
+  border: 1px solid var(--color-text);
+}
+
+.btn--primary:hover {
+  background-color: #3d3d38;
+  border-color: #3d3d38;
+  color: var(--color-bg);
+}
+
+.btn--text {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: opacity var(--transition);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn--text:hover {
+  opacity: 0.55;
+}
+
+/* ============================================================
+  19. PLACEHOLDER STATES (images not yet added)
+   ============================================================ */
+.img-placeholder {
+  background-color: var(--color-divider);
+  position: relative;
+}
+
+.img-placeholder::after {
+  content: attr(data-placeholder-label, 'Image');
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* Category card placeholder */
+.category-card__image.img-placeholder {
+  min-height: 240px;
+}
+
+/* Project card placeholder */
+.project-card__media.img-placeholder {
+  min-height: 200px;
+}
+
+/* Artwork card placeholder */
+.artwork-card__img-wrap.img-placeholder {
+  min-height: 180px;
+}
+
+/* ============================================================
+  20. RESPONSIVE — TABLET (≤ 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+  :root {
+    --space-xl: 5rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr 300px;
+    gap: var(--space-lg);
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .film-card {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .film-card:nth-child(even) {
+    direction: ltr;
+  }
+
+  .gallery-grid {
+    columns: 2;
+  }
+}
+
+/* ============================================================
+  21. RESPONSIVE — MOBILE (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  :root {
+    --space-xl: 4rem;
+    --space-lg: 2.5rem;
+    --container-pad: 1.25rem;
+  }
+
+  /* --- Nav mobile --- */
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-divider);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-md) var(--container-pad);
+    gap: var(--space-md);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 99;
+  }
+
+  .nav-links.nav-links--open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* --- About --- */
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-portrait {
+    position: static;
+    order: -1;
+    max-width: 280px;
+  }
+
+  /* --- Fine Art --- */
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .gallery-grid {
+    columns: 1;
+  }
+
+  /* --- Theatre --- */
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Film --- */
+  .film-card {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .film-card:nth-child(even) {
+    direction: ltr;
+  }
+
+  /* --- Exhibitions --- */
+  .exhibition-item {
+    grid-template-columns: 60px 1fr;
+    gap: var(--space-sm);
+  }
+
+  /* --- Lightbox --- */
+  .lightbox__prev { left: 0.5rem; }
+  .lightbox__next { right: 0.5rem; }
+  .lightbox__img  { max-width: 95vw; max-height: 75vh; }
+
+  /* --- Footer --- */
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Extra small */
+@media (max-width: 420px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}

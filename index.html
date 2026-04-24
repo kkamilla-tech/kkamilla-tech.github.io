@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- REPLACE: Update the title with the artist's name -->
+  <title>Kamilla — Artist Portfolio</title>
+  <meta name="description" content="Portfolio of Kamilla — fine art, theatre, film, and exhibitions." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Preconnect for Vimeo embeds -->
+  <link rel="preconnect" href="https://player.vimeo.com" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="site-header" role="banner">
+    <nav class="nav" aria-label="Main navigation">
+      <!-- REPLACE: Artist name in the logo -->
+      <a href="#about" class="nav-logo">Kamilla</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#fine-art">Fine Art</a></li>
+        <li><a href="#theatre">Theatre</a></li>
+        <li><a href="#film">Film</a></li>
+        <li><a href="#exhibitions">Exhibitions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== SECTION 1: ABOUT ===================== -->
+    <section id="about" class="section section--about" aria-labelledby="about-heading">
+      <div class="container about-grid">
+        <div class="about-text">
+          <!-- REPLACE: Artist name -->
+          <h1 class="about-name">Kamilla</h1>
+          <!-- REPLACE: Artist tagline or discipline -->
+          <p class="about-tagline">Fine Artist &amp; Theatre Maker</p>
+          <!-- REPLACE: Biography paragraph -->
+          <p class="about-bio">
+            Kamilla is a multidisciplinary artist working at the intersection of fine art, 
+            performance, and film. Her practice spans drawing, painting, sculpture, and 
+            scenic design, with a particular interest in the texture of materials and the 
+            narrative potential of space. She has exhibited internationally and collaborated 
+            with theatre companies across Europe.
+          </p>
+          <!-- REPLACE: Artist statement -->
+          <p class="about-statement">
+            "I am drawn to the quiet weight of things — the way light falls on a surface, 
+            the way a stage holds silence. My work is an attempt to make that stillness visible."
+          </p>
+          <!-- REPLACE: CV link if needed -->
+          <a href="#" class="btn btn--outline" aria-label="Download CV (PDF)">Download CV</a>
+        </div>
+        <div class="about-portrait">
+          <!-- REPLACE: /images/about/portrait.jpg with the actual portrait image -->
+          <img
+            src="images/about/portrait.jpg"
+            alt="Portrait of Kamilla"
+            loading="lazy"
+            class="portrait-img"
+            onerror="this.parentElement.classList.add('portrait-placeholder')"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 2: FINE ART ===================== -->
+    <section id="fine-art" class="section section--fine-art" aria-labelledby="fine-art-heading">
+      <div class="container">
+        <h2 id="fine-art-heading" class="section-title">Fine Art</h2>
+        <p class="section-intro">
+          <!-- REPLACE: Short intro text for the Fine Art section -->
+          A selection of works across drawing, painting, sculpture, and scenic painting.
+        </p>
+
+        <!-- Fine Art Category Grid -->
+        <div class="category-grid" role="list">
+
+          <!-- --- DRAWING CATEGORY CARD --- -->
+          <article class="category-card" role="listitem">
+            <!-- REPLACE: /images/fine-art/drawing/cover.jpg -->
+            <div class="category-card__image">
+              <img
+                src="images/fine-art/drawing/cover.jpg"
+                alt="Drawing works by Kamilla"
+                loading="lazy"
+                onerror="this.parentElement.classList.add('img-placeholder')"
+              />
+            </div>
+            <div class="category-card__body">
+              <h3 class="category-card__title">Drawing</h3>
+              <!-- REPLACE: Short description for drawing -->
+              <p class="category-card__desc">Graphite, ink, and charcoal works exploring form, line, and the figure.</p>
+              <button
+                class="btn btn--text"
+                data-gallery="drawing"
+                aria-expanded="false"
+                aria-controls="gallery-drawing"
+              >View Works →</button>
+            </div>
+          </article>
+
+          <!-- --- PAINTING CATEGORY CARD --- -->
+          <article class="category-card" role="listitem">
+            <!-- REPLACE: /images/fine-art/painting/cover.jpg -->
+            <div class="category-card__image">
+              <img
+                src="images/fine-art/painting/cover.jpg"
+                alt="Painting works by Kamilla"
+                loading="lazy"
+                onerror="this.parentElement.classList.add('img-placeholder')"
+              />
+            </div>
+            <div class="category-card__body">
+              <h3 class="category-card__title">Painting</h3>
+              <!-- REPLACE: Short description for painting -->
+              <p class="category-card__desc">Oil and acrylic paintings investigating colour, surface, and atmosphere.</p>
+              <button
+                class="btn btn--text"
+                data-gallery="painting"
+                aria-expanded="false"
+                aria-controls="gallery-painting"
+              >View Works →</button>
+            </div>
+          </article>
+
+          <!-- --- SCULPTURE CATEGORY CARD --- -->
+          <article class="category-card" role="listitem">
+            <!-- REPLACE: /images/fine-art/sculpture/cover.jpg -->
+            <div class="category-card__image">
+              <img
+                src="images/fine-art/sculpture/cover.jpg"
+                alt="Sculpture works by Kamilla"
+                loading="lazy"
+                onerror="this.parentElement.classList.add('img-placeholder')"
+              />
+            </div>
+            <div class="category-card__body">
+              <h3 class="category-card__title">Sculpture</h3>
+              <!-- REPLACE: Short description for sculpture -->
+              <p class="category-card__desc">Three-dimensional works in clay, plaster, and mixed materials.</p>
+              <button
+                class="btn btn--text"
+                data-gallery="sculpture"
+                aria-expanded="false"
+                aria-controls="gallery-sculpture"
+              >View Works →</button>
+            </div>
+          </article>
+
+          <!-- --- SCENIC PAINTING CATEGORY CARD --- -->
+          <article class="category-card" role="listitem">
+            <!-- REPLACE: /images/fine-art/scenic-painting/cover.jpg -->
+            <div class="category-card__image">
+              <img
+                src="images/fine-art/scenic-painting/cover.jpg"
+                alt="Scenic painting works by Kamilla"
+                loading="lazy"
+                onerror="this.parentElement.classList.add('img-placeholder')"
+              />
+            </div>
+            <div class="category-card__body">
+              <h3 class="category-card__title">Scenic Painting</h3>
+              <!-- REPLACE: Short description for scenic painting -->
+              <p class="category-card__desc">Large-scale painted environments and backdrops for stage and installation.</p>
+              <button
+                class="btn btn--text"
+                data-gallery="scenic-painting"
+                aria-expanded="false"
+                aria-controls="gallery-scenic-painting"
+              >View Works →</button>
+            </div>
+          </article>
+
+        </div><!-- /.category-grid -->
+
+        <!-- ===== INLINE GALLERIES (hidden by default, revealed on button click) ===== -->
+
+        <!-- DRAWING GALLERY -->
+        <div id="gallery-drawing" class="gallery-panel" hidden aria-label="Drawing gallery">
+          <div class="gallery-panel__header">
+            <h3>Drawing</h3>
+            <button class="gallery-close" data-gallery="drawing" aria-label="Close Drawing gallery">✕ Close</button>
+          </div>
+          <div class="gallery-grid">
+            <!--
+              ARTWORK CARD PATTERN — duplicate this block for each artwork.
+              REPLACE: src, alt, title, year, medium, dimensions, description
+            -->
+            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Untitled Study I">
+              <div class="artwork-card__img-wrap">
+                <img src="images/fine-art/drawing/drawing-01.jpg" alt="Untitled Study I" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" />
+              </div>
+              <figcaption class="artwork-card__caption">
+                <p class="artwork-title">Untitled Study I</p>
+                <p class="artwork-meta">2023 · Graphite on paper · 42 × 59 cm</p>
+              </figcaption>
+            </figure>
+
+            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Untitled Study II">
+              <div class="artwork-card__img-wrap">
+                <img src="images/fine-art/drawing/drawing-02.jpg" alt="Untitled Study II" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" />
+              </div>
+              <figcaption class="artwork-card__caption">
+                <p class="artwork-title">Untitled Study II</p>
+                <p class="artwork-meta">2022 · Charcoal on paper · 50 × 70 cm</p>
+              </figcaption>
+            </figure>
+
+            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Figure in Space">
+              <div class="artwork-card__img-wrap">
+                <img src="images/fine-art/drawing/drawing-03.jpg" alt="Figure in Space" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" />
+              </div>
+              <figcaption class="artwork-card__caption">
+                <p class="artwork-title">Figure in Space</p>
+                <p class="artwork-meta">2022 · Ink on paper · 29.7 × 42 cm</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- PAINTING GALLERY -->
+        <div id="gallery-painting" class="gallery-panel" hidden aria-label="Painting gallery">
+          <div class="gallery-panel__header">
+            <h3>Painting</h3>
+            <button class="gallery-close" data-gallery="painting" aria-label="Close Painting gallery">✕ Close</button>
+          </div>
+          <div class="gallery-grid">
+            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Still Life with Blue">
+              <div class="artwork-card__img-wrap">
+                <img src="images/fine-art/painting/painting-01.jpg" alt="Still Life with Blue" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" />
+              </div>
+              <figcaption class="artwork-card__caption">
+                <p class="artwork-title">Still Life with Blue</p>
+                <p class="artwork-meta">2024 · Oil on linen · 60 × 80 cm</p>
+              </figcaption>
+            </figure>
+
+            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Interior, Morning">
+              <div class="artwork-card__img-wrap">
+                <img src="images/fine-art/painting/painting-02.jpg" alt="Interior, Morning" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" />
+              </div>
+              <figcaption class="artwork-card__caption">
+                <p class="artwork-title">Interior, Morning</p>
+                <p class="artwork-meta">2023 · Oil on canvas · 80 × 100 cm</p>
+              </figcaption>
+            </figure>
+
+            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Ochre Field">
+              <div class="artwork-card__img-wrap">
+                <img src="images/fine-art/painting/painting-03.jpg" alt="Ochre Field" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" />
+              </div>
+              <figcaption class="artwork-card__caption">
+                <p class="artwork-title">Ochre Field</p>
+                <p class="artwork-meta">2021 · Acrylic on board · 40 × 40 cm</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- SCULPTURE GALLERY -->
+        <div id="gallery-sculpture" class="gallery-panel" hidden aria-label="Sculpture gallery">
+          <div class="gallery-panel__header">
+            <h3>Sculpture</h3>
+            <button class="gallery-close" data-gallery="sculpture" aria-label="Close Sculpture gallery">✕ Close</button>
+          </div>
+          <div class="gallery-grid">
+            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Form No. 1">
+              <div class="artwork-card__img-wrap">
+                <img src="images/fine-art/sculpture/sculpture-01.jpg" alt="Form No. 1" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" />
+              </div>
+              <figcaption class="artwork-card__caption">
+                <p class="artwork-title">Form No. 1</p>
+                <p class="artwork-meta">2023 · Fired clay · 30 × 20 × 18 cm</p>
+              </figcaption>
+            </figure>
+
+            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Vessel Study">
+              <div class="artwork-card__img-wrap">
+                <img src="images/fine-art/sculpture/sculpture-02.jpg" alt="Vessel Study" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" />
+              </div>
+              <figcaption class="artwork-card__caption">
+                <p class="artwork-title">Vessel Study</p>
+                <p class="artwork-meta">2022 · Plaster · 45 × 15 × 15 cm</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- SCENIC PAINTING GALLERY -->
+        <div id="gallery-scenic-painting" class="gallery-panel" hidden aria-label="Scenic Painting gallery">
+          <div class="gallery-panel__header">
+            <h3>Scenic Painting</h3>
+            <button class="gallery-close" data-gallery="scenic-painting" aria-label="Close Scenic Painting gallery">✕ Close</button>
+          </div>
+          <div class="gallery-grid">
+            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Forest Backdrop, Act II">
+              <div class="artwork-card__img-wrap">
+                <img src="images/fine-art/scenic-painting/scenic-01.jpg" alt="Forest Backdrop, Act II" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" />
+              </div>
+              <figcaption class="artwork-card__caption">
+                <p class="artwork-title">Forest Backdrop, Act II</p>
+                <p class="artwork-meta">2023 · Scene paint on canvas · 6 × 8 m</p>
+              </figcaption>
+            </figure>
+
+            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Dusk Environment">
+              <div class="artwork-card__img-wrap">
+                <img src="images/fine-art/scenic-painting/scenic-02.jpg" alt="Dusk Environment" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" />
+              </div>
+              <figcaption class="artwork-card__caption">
+                <p class="artwork-title">Dusk Environment</p>
+                <p class="artwork-meta">2022 · Scene paint and texture · 4 × 6 m</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+      </div><!-- /.container -->
+    </section>
+
+    <!-- ===================== SECTION 3: THEATRE ===================== -->
+    <section id="theatre" class="section section--theatre" aria-labelledby="theatre-heading">
+      <div class="container">
+        <h2 id="theatre-heading" class="section-title">Theatre</h2>
+        <p class="section-intro">
+          <!-- REPLACE: Short intro for theatre section -->
+          Stage design, costume, direction, and performance work across international productions.
+        </p>
+
+        <!-- Theatre discipline tabs -->
+        <div class="discipline-tabs" role="tablist" aria-label="Theatre disciplines">
+          <button class="tab-btn tab-btn--active" role="tab" aria-selected="true" aria-controls="tab-performance" id="tab-btn-performance">Performance</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-costume" id="tab-btn-costume">Costume</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-decor" id="tab-btn-decor">Décor</button>
+          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-direction" id="tab-btn-direction">Direction</button>
+        </div>
+
+        <!-- PERFORMANCE TAB PANEL -->
+        <div id="tab-performance" class="tab-panel tab-panel--active" role="tabpanel" aria-labelledby="tab-btn-performance">
+          <div class="project-grid">
+
+            <!--
+              THEATRE PROJECT CARD PATTERN — duplicate this block for each project.
+              REPLACE: image, title, role, year, description, Vimeo URL
+            -->
+            <article class="project-card">
+              <div class="project-card__media">
+                <!-- REPLACE: /images/theatre/performance-01.jpg -->
+                <img src="images/theatre/performance-01.jpg" alt="The Silence Between — stage production" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" />
+              </div>
+              <div class="project-card__body">
+                <!-- REPLACE: Project title -->
+                <h3 class="project-card__title">The Silence Between</h3>
+                <!-- REPLACE: Role, year -->
+                <p class="project-card__meta">Performer &amp; Co-creator · 2023</p>
+                <!-- REPLACE: Short description -->
+                <p class="project-card__desc">A devised piece exploring grief and memory through movement and sculptural staging. Performed at the National Theatre Studio, London.</p>
+                <!-- VIMEO EMBED — REPLACE: the src URL with the actual Vimeo player URL -->
+                <!-- Format: https://player.vimeo.com/video/YOUR_VIDEO_ID -->
+                <div class="vimeo-embed" data-vimeo-id="REPLACE_WITH_VIMEO_ID">
+                  <div class="vimeo-placeholder">
+                    <p>▶ Watch trailer on Vimeo</p>
+                    <p class="vimeo-hint">Replace data-vimeo-id with actual Vimeo video ID to embed</p>
+                  </div>
+                  <!--
+                    VIMEO EMBED — uncomment and replace VIMEO_VIDEO_ID:
+                    <iframe
+                      src="https://player.vimeo.com/video/VIMEO_VIDEO_ID?title=0&byline=0&portrait=0"
+                      width="100%"
+                      frameborder="0"
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      allowfullscreen
+                      title="The Silence Between — trailer"
+                      loading="lazy"
+                    ></iframe>
+                  -->
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__media">
+                <img src="images/theatre/performance-02.jpg" alt="Borderlands — stage production" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" />
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Borderlands</h3>
+                <p class="project-card__meta">Set &amp; Costume Design · 2022</p>
+                <p class="project-card__desc">A bilingual theatre production examining displacement and identity, designed for touring across three countries.</p>
+                <div class="vimeo-embed" data-vimeo-id="REPLACE_WITH_VIMEO_ID">
+                  <div class="vimeo-placeholder">
+                    <p>▶ Watch trailer on Vimeo</p>
+                    <p class="vimeo-hint">Replace data-vimeo-id with actual Vimeo video ID to embed</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div><!-- /#tab-performance -->
+
+        <!-- COSTUME TAB PANEL -->
+        <div id="tab-costume" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-costume" hidden>
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-card__media">
+                <img src="images/theatre/costume-01.jpg" alt="Costume design for Medea" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" />
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Medea</h3>
+                <p class="project-card__meta">Costume Designer · 2023</p>
+                <p class="project-card__desc">Full costume design for a reimagined production of Medea, set in a contemporary industrial space. Hand-dyed and distressed fabrics.</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__media">
+                <img src="images/theatre/costume-02.jpg" alt="Costume design for The Garden" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" />
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">The Garden</h3>
+                <p class="project-card__meta">Costume Designer · 2021</p>
+                <p class="project-card__desc">Costume and visual identity for an outdoor promenade performance, drawing from folklore and seasonal ritual.</p>
+              </div>
+            </article>
+          </div>
+        </div><!-- /#tab-costume -->
+
+        <!-- DÉCOR TAB PANEL -->
+        <div id="tab-decor" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-decor" hidden>
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-card__media">
+                <img src="images/theatre/decor-01.jpg" alt="Décor for The Last Room" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" />
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">The Last Room</h3>
+                <p class="project-card__meta">Scenic &amp; Set Design · 2022</p>
+                <p class="project-card__desc">Set and décor design for a chamber theatre piece. Hand-built scenic elements combining found objects, paint, and texture.</p>
+              </div>
+            </article>
+          </div>
+        </div><!-- /#tab-decor -->
+
+        <!-- DIRECTION TAB PANEL -->
+        <div id="tab-direction" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-direction" hidden>
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-card__media">
+                <img src="images/theatre/direction-01.jpg" alt="Direction — Ashes" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" />
+              </div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Ashes</h3>
+                <p class="project-card__meta">Director · 2024</p>
+                <p class="project-card__desc">A new writing production exploring intergenerational trauma. Directed for the Edinburgh Festival Fringe, 2024.</p>
+                <!-- VIMEO EMBED EXAMPLE — REPLACE VIMEO_VIDEO_ID -->
+                <!--
+                  <div class="vimeo-embed">
+                    <iframe
+                      src="https://player.vimeo.com/video/VIMEO_VIDEO_ID?title=0&byline=0&portrait=0"
+                      width="100%"
+                      frameborder="0"
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      allowfullscreen
+                      title="Ashes — trailer"
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                -->
+              </div>
+            </article>
+          </div>
+        </div><!-- /#tab-direction -->
+
+      </div><!-- /.container -->
+    </section>
+
+    <!-- ===================== SECTION 4: FILM ===================== -->
+    <section id="film" class="section section--film" aria-labelledby="film-heading">
+      <div class="container">
+        <h2 id="film-heading" class="section-title">Film</h2>
+        <p class="section-intro">
+          <!-- REPLACE: Short intro for film section -->
+          Short films, production design, and moving image work.
+        </p>
+
+        <div class="film-grid">
+
+          <!--
+            FILM PROJECT CARD PATTERN — duplicate this block for each film.
+            REPLACE: image, title, description, Vimeo URL (VIMEO_VIDEO_ID)
+          -->
+          <article class="film-card">
+            <div class="film-card__video">
+              <!--
+                VIMEO EMBED — REPLACE VIMEO_VIDEO_ID with the actual ID from the Vimeo URL.
+                Example URL: https://vimeo.com/123456789 → ID is 123456789
+                REPLACE title attribute too.
+              -->
+              <div class="vimeo-embed vimeo-embed--film" data-vimeo-id="REPLACE_WITH_VIMEO_ID">
+                <div class="vimeo-placeholder">
+                  <p class="vimeo-placeholder__icon">▶</p>
+                  <p class="vimeo-placeholder__label">Watch on Vimeo</p>
+                  <p class="vimeo-hint">Replace data-vimeo-id with actual Vimeo video ID</p>
+                </div>
+                <!--
+                  Uncomment and replace VIMEO_VIDEO_ID:
+                  <iframe
+                    src="https://player.vimeo.com/video/VIMEO_VIDEO_ID?title=0&byline=0&portrait=0&color=ffffff"
+                    width="100%"
+                    frameborder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowfullscreen
+                    title="REPLACE: Film title"
+                    loading="lazy"
+                  ></iframe>
+                -->
+              </div>
+            </div>
+            <div class="film-card__body">
+              <!-- REPLACE: Film title -->
+              <h3 class="film-card__title">The Drift</h3>
+              <!-- REPLACE: Year, role, duration -->
+              <p class="film-card__meta">2023 · Director &amp; Production Designer · 14 min</p>
+              <!-- REPLACE: Description -->
+              <p class="film-card__desc">A short film about a woman returning to her childhood home. Shot on 16mm, exploring the archaeology of domestic memory through light and texture.</p>
+            </div>
+          </article>
+
+          <article class="film-card">
+            <div class="film-card__video">
+              <div class="vimeo-embed vimeo-embed--film" data-vimeo-id="REPLACE_WITH_VIMEO_ID">
+                <div class="vimeo-placeholder">
+                  <p class="vimeo-placeholder__icon">▶</p>
+                  <p class="vimeo-placeholder__label">Watch on Vimeo</p>
+                  <p class="vimeo-hint">Replace data-vimeo-id with actual Vimeo video ID</p>
+                </div>
+              </div>
+            </div>
+            <div class="film-card__body">
+              <h3 class="film-card__title">Salt and Stone</h3>
+              <p class="film-card__meta">2022 · Production Designer · 22 min</p>
+              <p class="film-card__desc">An experimental documentary about coastal erosion and the traces people leave behind. Production design and art direction.</p>
+            </div>
+          </article>
+
+          <article class="film-card">
+            <div class="film-card__video">
+              <div class="film-card__stills">
+                <!-- REPLACE: Film stills gallery -->
+                <img src="images/film/film-stills-01.jpg" alt="Still from the film Elsewhere" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" class="film-still" />
+              </div>
+            </div>
+            <div class="film-card__body">
+              <h3 class="film-card__title">Elsewhere</h3>
+              <p class="film-card__meta">2021 · Set Design · 8 min</p>
+              <p class="film-card__desc">Set design for a silent short film screened at the BFI London Film Festival. Visual world built from found materials and natural light.</p>
+            </div>
+          </article>
+
+        </div><!-- /.film-grid -->
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 5: EXHIBITIONS ===================== -->
+    <section id="exhibitions" class="section section--exhibitions" aria-labelledby="exhibitions-heading">
+      <div class="container">
+        <h2 id="exhibitions-heading" class="section-title">Exhibitions</h2>
+        <p class="section-intro">
+          <!-- REPLACE: Short intro for exhibitions -->
+          Selected solo and group exhibitions, 2018–present.
+        </p>
+
+        <ol class="exhibition-list" reversed>
+
+          <!--
+            EXHIBITION ITEM PATTERN — duplicate this block for each exhibition.
+            REPLACE: title, venue, city, year, description, photo
+          -->
+
+          <!-- REPLACE: Exhibition year, title, venue, city, description -->
+          <li class="exhibition-item">
+            <div class="exhibition-item__year">2024</div>
+            <div class="exhibition-item__body">
+              <h3 class="exhibition-item__title">Weight of Absence</h3>
+              <p class="exhibition-item__venue">Galerie du Nord, Paris</p>
+              <!-- REPLACE: Optional description -->
+              <p class="exhibition-item__desc">Solo exhibition of new paintings and drawings examining loss and material memory.</p>
+              <!-- REPLACE: Optional exhibition photo -->
+              <!--
+                <figure class="exhibition-item__photo">
+                  <img src="images/exhibitions/exhibition-2024.jpg" alt="Weight of Absence installation view" loading="lazy" />
+                </figure>
+              -->
+            </div>
+          </li>
+
+          <li class="exhibition-item">
+            <div class="exhibition-item__year">2023</div>
+            <div class="exhibition-item__body">
+              <h3 class="exhibition-item__title">Material Witness</h3>
+              <p class="exhibition-item__venue">The Yard Gallery · Nottingham</p>
+              <p class="exhibition-item__desc">Group exhibition featuring sculpture and installation work from six artists across the UK and Eastern Europe.</p>
+            </div>
+          </li>
+
+          <li class="exhibition-item">
+            <div class="exhibition-item__year">2022</div>
+            <div class="exhibition-item__body">
+              <h3 class="exhibition-item__title">Surface Tension</h3>
+              <p class="exhibition-item__venue">Open Eye Gallery · Liverpool</p>
+              <p class="exhibition-item__desc">A two-person show exploring the boundary between painting and photography.</p>
+            </div>
+          </li>
+
+          <li class="exhibition-item">
+            <div class="exhibition-item__year">2021</div>
+            <div class="exhibition-item__body">
+              <h3 class="exhibition-item__title">Threshold</h3>
+              <p class="exhibition-item__venue">Kunsthalle Wien · Vienna</p>
+              <p class="exhibition-item__desc">Group show examining states of transition. Exhibited two large-scale scenic paintings and a sound installation.</p>
+            </div>
+          </li>
+
+          <li class="exhibition-item">
+            <div class="exhibition-item__year">2020</div>
+            <div class="exhibition-item__body">
+              <h3 class="exhibition-item__title">New Voices</h3>
+              <p class="exhibition-item__venue">Flowers Gallery · London</p>
+              <p class="exhibition-item__desc">Annual survey of emerging artists. Selected works: graphite drawings and mixed-media works on paper.</p>
+            </div>
+          </li>
+
+          <li class="exhibition-item">
+            <div class="exhibition-item__year">2018</div>
+            <div class="exhibition-item__body">
+              <h3 class="exhibition-item__title">Degree Show</h3>
+              <p class="exhibition-item__venue">Royal Academy of Arts · London</p>
+              <p class="exhibition-item__desc">Graduation exhibition, BA Fine Art. Principal works: oil paintings and charcoal figure studies.</p>
+            </div>
+          </li>
+
+        </ol><!-- /.exhibition-list -->
+      </div>
+    </section>
+
+    <!-- ===================== SECTION 6: CONTACT ===================== -->
+    <section id="contact" class="section section--contact" aria-labelledby="contact-heading">
+      <div class="container contact-inner">
+        <h2 id="contact-heading" class="section-title">Contact</h2>
+        <!-- REPLACE: Contact intro text -->
+        <p class="contact-intro">
+          For inquiries about commissions, exhibitions, collaborations, or press, please get in touch.
+        </p>
+        <div class="contact-links">
+          <!-- REPLACE: email address -->
+          <a href="mailto:studio@kamilla.art" class="contact-link contact-link--email" aria-label="Send email to studio@kamilla.art">
+            studio@kamilla.art
+          </a>
+          <!-- REPLACE: Instagram URL and handle -->
+          <a href="https://instagram.com/REPLACE_INSTAGRAM_HANDLE" class="contact-link contact-link--instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile (opens in new tab)">
+            @kamilla_art
+          </a>
+          <!-- Add more social links as needed, following the same pattern -->
+        </div>
+        <!-- Optional: Visual contact form (not wired up — static only) -->
+        <!--
+          To wire up the form, connect to Formspree (https://formspree.io) or Netlify Forms.
+          Set action="https://formspree.io/f/YOUR_FORM_ID" and method="POST".
+        -->
+        <!--
+        <form class="contact-form" action="#" method="POST" aria-label="Contact form">
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" autocomplete="name" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" autocomplete="email" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="6" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Send Message</button>
+        </form>
+        -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <!-- REPLACE: Artist name and year -->
+      <p>© 2024 Kamilla. All rights reserved.</p>
+      <p class="footer-built">Built with care.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== LIGHTBOX MODAL ===================== -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <button class="lightbox__close" aria-label="Close image viewer">✕</button>
+    <button class="lightbox__prev" aria-label="Previous image">&#8592;</button>
+    <button class="lightbox__next" aria-label="Next image">&#8594;</button>
+    <div class="lightbox__content">
+      <img class="lightbox__img" src="" alt="" />
+      <div class="lightbox__caption">
+        <p class="lightbox__title"></p>
+        <p class="lightbox__meta"></p>
+      </div>
+    </div>
+  </div>
+  <div class="lightbox-overlay" id="lightbox-overlay" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
