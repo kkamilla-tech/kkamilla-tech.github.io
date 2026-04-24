@@ -180,8 +180,9 @@
         const key = btn.getAttribute('data-gallery');
         closeGallery(key);
 
-        // Scroll back to the Fine Art section
-        const section = document.getElementById('fine-art');
+        // Scroll back to the section containing this gallery panel
+        const panel = document.getElementById('gallery-' + key);
+        const section = panel && panel.closest('section');
         if (section) {
           section.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }

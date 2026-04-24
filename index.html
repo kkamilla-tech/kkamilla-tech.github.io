@@ -84,10 +84,9 @@
 
           <!-- --- DRAWING CATEGORY CARD --- -->
           <article class="category-card" role="listitem">
-            <!-- REPLACE: /images/fine-art/drawing/cover.jpg -->
             <div class="category-card__image">
               <img
-                src="images/fine-art/drawing/cover.jpg"
+                src="images/fine-art/drawing/IMG_2204.JPG"
                 alt="Drawing works by Kamilla"
                 loading="lazy"
                 onerror="this.parentElement.classList.add('img-placeholder')"
@@ -108,10 +107,9 @@
 
           <!-- --- PAINTING CATEGORY CARD --- -->
           <article class="category-card" role="listitem">
-            <!-- REPLACE: /images/fine-art/painting/cover.jpg -->
             <div class="category-card__image">
               <img
-                src="images/fine-art/painting/cover.jpg"
+                src="images/fine-art/painting/IMG_2235.JPG"
                 alt="Painting works by Kamilla"
                 loading="lazy"
                 onerror="this.parentElement.classList.add('img-placeholder')"
@@ -130,36 +128,11 @@
             </div>
           </article>
 
-          <!-- --- SCULPTURE CATEGORY CARD --- -->
-          <article class="category-card" role="listitem">
-            <!-- REPLACE: /images/fine-art/sculpture/cover.jpg -->
-            <div class="category-card__image">
-              <img
-                src="images/fine-art/sculpture/cover.jpg"
-                alt="Sculpture works by Kamilla"
-                loading="lazy"
-                onerror="this.parentElement.classList.add('img-placeholder')"
-              />
-            </div>
-            <div class="category-card__body">
-              <h3 class="category-card__title">Sculpture</h3>
-              <!-- REPLACE: Short description for sculpture -->
-              <p class="category-card__desc">Three-dimensional works in clay, plaster, and mixed materials.</p>
-              <button
-                class="btn btn--text"
-                data-gallery="sculpture"
-                aria-expanded="false"
-                aria-controls="gallery-sculpture"
-              >View Works →</button>
-            </div>
-          </article>
-
           <!-- --- SCENIC PAINTING CATEGORY CARD --- -->
           <article class="category-card" role="listitem">
-            <!-- REPLACE: /images/fine-art/scenic-painting/cover.jpg -->
             <div class="category-card__image">
               <img
-                src="images/fine-art/scenic-painting/cover.jpg"
+                src="images/fine-art/scenic-painting/IMAG0324.jpg"
                 alt="Scenic painting works by Kamilla"
                 loading="lazy"
                 onerror="this.parentElement.classList.add('img-placeholder')"
@@ -182,154 +155,31 @@
 
         <!-- ===== INLINE GALLERIES (hidden by default, revealed on button click) ===== -->
 
-        <!-- DRAWING GALLERY -->
+        <!-- DRAWING GALLERY — populated by galleries.js -->
         <div id="gallery-drawing" class="gallery-panel" hidden aria-label="Drawing gallery">
           <div class="gallery-panel__header">
             <h3>Drawing</h3>
             <button class="gallery-close" data-gallery="drawing" aria-label="Close Drawing gallery">✕ Close</button>
           </div>
-          <div class="gallery-grid">
-            <!--
-              ARTWORK CARD PATTERN — duplicate this block for each artwork.
-              REPLACE: src, alt, title, year, medium, dimensions, description
-            -->
-            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Untitled Study I">
-              <div class="artwork-card__img-wrap">
-                <img src="images/fine-art/drawing/drawing-01.jpg" alt="Untitled Study I" loading="lazy"
-                  onerror="this.parentElement.classList.add('img-placeholder')" />
-              </div>
-              <figcaption class="artwork-card__caption">
-                <p class="artwork-title">Untitled Study I</p>
-                <p class="artwork-meta">2023 · Graphite on paper · 42 × 59 cm</p>
-              </figcaption>
-            </figure>
-
-            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Untitled Study II">
-              <div class="artwork-card__img-wrap">
-                <img src="images/fine-art/drawing/drawing-02.jpg" alt="Untitled Study II" loading="lazy"
-                  onerror="this.parentElement.classList.add('img-placeholder')" />
-              </div>
-              <figcaption class="artwork-card__caption">
-                <p class="artwork-title">Untitled Study II</p>
-                <p class="artwork-meta">2022 · Charcoal on paper · 50 × 70 cm</p>
-              </figcaption>
-            </figure>
-
-            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Figure in Space">
-              <div class="artwork-card__img-wrap">
-                <img src="images/fine-art/drawing/drawing-03.jpg" alt="Figure in Space" loading="lazy"
-                  onerror="this.parentElement.classList.add('img-placeholder')" />
-              </div>
-              <figcaption class="artwork-card__caption">
-                <p class="artwork-title">Figure in Space</p>
-                <p class="artwork-meta">2022 · Ink on paper · 29.7 × 42 cm</p>
-              </figcaption>
-            </figure>
-          </div>
+          <div class="gallery-grid"></div>
         </div>
 
-        <!-- PAINTING GALLERY -->
+        <!-- PAINTING GALLERY — populated by galleries.js -->
         <div id="gallery-painting" class="gallery-panel" hidden aria-label="Painting gallery">
           <div class="gallery-panel__header">
             <h3>Painting</h3>
             <button class="gallery-close" data-gallery="painting" aria-label="Close Painting gallery">✕ Close</button>
           </div>
-          <div class="gallery-grid">
-            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Still Life with Blue">
-              <div class="artwork-card__img-wrap">
-                <img src="images/fine-art/painting/painting-01.jpg" alt="Still Life with Blue" loading="lazy"
-                  onerror="this.parentElement.classList.add('img-placeholder')" />
-              </div>
-              <figcaption class="artwork-card__caption">
-                <p class="artwork-title">Still Life with Blue</p>
-                <p class="artwork-meta">2024 · Oil on linen · 60 × 80 cm</p>
-              </figcaption>
-            </figure>
-
-            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Interior, Morning">
-              <div class="artwork-card__img-wrap">
-                <img src="images/fine-art/painting/painting-02.jpg" alt="Interior, Morning" loading="lazy"
-                  onerror="this.parentElement.classList.add('img-placeholder')" />
-              </div>
-              <figcaption class="artwork-card__caption">
-                <p class="artwork-title">Interior, Morning</p>
-                <p class="artwork-meta">2023 · Oil on canvas · 80 × 100 cm</p>
-              </figcaption>
-            </figure>
-
-            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Ochre Field">
-              <div class="artwork-card__img-wrap">
-                <img src="images/fine-art/painting/painting-03.jpg" alt="Ochre Field" loading="lazy"
-                  onerror="this.parentElement.classList.add('img-placeholder')" />
-              </div>
-              <figcaption class="artwork-card__caption">
-                <p class="artwork-title">Ochre Field</p>
-                <p class="artwork-meta">2021 · Acrylic on board · 40 × 40 cm</p>
-              </figcaption>
-            </figure>
-          </div>
+          <div class="gallery-grid"></div>
         </div>
 
-        <!-- SCULPTURE GALLERY -->
-        <div id="gallery-sculpture" class="gallery-panel" hidden aria-label="Sculpture gallery">
-          <div class="gallery-panel__header">
-            <h3>Sculpture</h3>
-            <button class="gallery-close" data-gallery="sculpture" aria-label="Close Sculpture gallery">✕ Close</button>
-          </div>
-          <div class="gallery-grid">
-            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Form No. 1">
-              <div class="artwork-card__img-wrap">
-                <img src="images/fine-art/sculpture/sculpture-01.jpg" alt="Form No. 1" loading="lazy"
-                  onerror="this.parentElement.classList.add('img-placeholder')" />
-              </div>
-              <figcaption class="artwork-card__caption">
-                <p class="artwork-title">Form No. 1</p>
-                <p class="artwork-meta">2023 · Fired clay · 30 × 20 × 18 cm</p>
-              </figcaption>
-            </figure>
-
-            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Vessel Study">
-              <div class="artwork-card__img-wrap">
-                <img src="images/fine-art/sculpture/sculpture-02.jpg" alt="Vessel Study" loading="lazy"
-                  onerror="this.parentElement.classList.add('img-placeholder')" />
-              </div>
-              <figcaption class="artwork-card__caption">
-                <p class="artwork-title">Vessel Study</p>
-                <p class="artwork-meta">2022 · Plaster · 45 × 15 × 15 cm</p>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-
-        <!-- SCENIC PAINTING GALLERY -->
+        <!-- SCENIC PAINTING GALLERY — populated by galleries.js -->
         <div id="gallery-scenic-painting" class="gallery-panel" hidden aria-label="Scenic Painting gallery">
           <div class="gallery-panel__header">
             <h3>Scenic Painting</h3>
             <button class="gallery-close" data-gallery="scenic-painting" aria-label="Close Scenic Painting gallery">✕ Close</button>
           </div>
-          <div class="gallery-grid">
-            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Forest Backdrop, Act II">
-              <div class="artwork-card__img-wrap">
-                <img src="images/fine-art/scenic-painting/scenic-01.jpg" alt="Forest Backdrop, Act II" loading="lazy"
-                  onerror="this.parentElement.classList.add('img-placeholder')" />
-              </div>
-              <figcaption class="artwork-card__caption">
-                <p class="artwork-title">Forest Backdrop, Act II</p>
-                <p class="artwork-meta">2023 · Scene paint on canvas · 6 × 8 m</p>
-              </figcaption>
-            </figure>
-
-            <figure class="artwork-card" tabindex="0" role="button" aria-label="Open artwork: Dusk Environment">
-              <div class="artwork-card__img-wrap">
-                <img src="images/fine-art/scenic-painting/scenic-02.jpg" alt="Dusk Environment" loading="lazy"
-                  onerror="this.parentElement.classList.add('img-placeholder')" />
-              </div>
-              <figcaption class="artwork-card__caption">
-                <p class="artwork-title">Dusk Environment</p>
-                <p class="artwork-meta">2022 · Scene paint and texture · 4 × 6 m</p>
-              </figcaption>
-            </figure>
-          </div>
+          <div class="gallery-grid"></div>
         </div>
 
       </div><!-- /.container -->
@@ -340,159 +190,14 @@
       <div class="container">
         <h2 id="theatre-heading" class="section-title">Theatre</h2>
         <p class="section-intro">
-          <!-- REPLACE: Short intro for theatre section -->
-          Stage design, costume, direction, and performance work across international productions.
+          Stage design, costume, and production work across international productions.
         </p>
 
-        <!-- Theatre discipline tabs -->
-        <div class="discipline-tabs" role="tablist" aria-label="Theatre disciplines">
-          <button class="tab-btn tab-btn--active" role="tab" aria-selected="true" aria-controls="tab-performance" id="tab-btn-performance">Performance</button>
-          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-costume" id="tab-btn-costume">Costume</button>
-          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-decor" id="tab-btn-decor">Décor</button>
-          <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-direction" id="tab-btn-direction">Direction</button>
-        </div>
+        <!-- Production cards — populated by galleries.js -->
+        <div id="theatre-production-grid" class="category-grid" role="list"></div>
 
-        <!-- PERFORMANCE TAB PANEL -->
-        <div id="tab-performance" class="tab-panel tab-panel--active" role="tabpanel" aria-labelledby="tab-btn-performance">
-          <div class="project-grid">
-
-            <!--
-              THEATRE PROJECT CARD PATTERN — duplicate this block for each project.
-              REPLACE: image, title, role, year, description, Vimeo URL
-            -->
-            <article class="project-card">
-              <div class="project-card__media">
-                <!-- REPLACE: /images/theatre/performance-01.jpg -->
-                <img src="images/theatre/performance-01.jpg" alt="The Silence Between — stage production" loading="lazy"
-                  onerror="this.parentElement.classList.add('img-placeholder')" />
-              </div>
-              <div class="project-card__body">
-                <!-- REPLACE: Project title -->
-                <h3 class="project-card__title">The Silence Between</h3>
-                <!-- REPLACE: Role, year -->
-                <p class="project-card__meta">Performer &amp; Co-creator · 2023</p>
-                <!-- REPLACE: Short description -->
-                <p class="project-card__desc">A devised piece exploring grief and memory through movement and sculptural staging. Performed at the National Theatre Studio, London.</p>
-                <!-- VIMEO EMBED — REPLACE: the src URL with the actual Vimeo player URL -->
-                <!-- Format: https://player.vimeo.com/video/YOUR_VIDEO_ID -->
-                <div class="vimeo-embed" data-vimeo-id="REPLACE_WITH_VIMEO_ID">
-                  <div class="vimeo-placeholder">
-                    <p>▶ Watch trailer on Vimeo</p>
-                    <p class="vimeo-hint">Replace data-vimeo-id with actual Vimeo video ID to embed</p>
-                  </div>
-                  <!--
-                    VIMEO EMBED — uncomment and replace VIMEO_VIDEO_ID:
-                    <iframe
-                      src="https://player.vimeo.com/video/VIMEO_VIDEO_ID?title=0&byline=0&portrait=0"
-                      width="100%"
-                      frameborder="0"
-                      allow="autoplay; fullscreen; picture-in-picture"
-                      allowfullscreen
-                      title="The Silence Between — trailer"
-                      loading="lazy"
-                    ></iframe>
-                  -->
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-card__media">
-                <img src="images/theatre/performance-02.jpg" alt="Borderlands — stage production" loading="lazy"
-                  onerror="this.parentElement.classList.add('img-placeholder')" />
-              </div>
-              <div class="project-card__body">
-                <h3 class="project-card__title">Borderlands</h3>
-                <p class="project-card__meta">Set &amp; Costume Design · 2022</p>
-                <p class="project-card__desc">A bilingual theatre production examining displacement and identity, designed for touring across three countries.</p>
-                <div class="vimeo-embed" data-vimeo-id="REPLACE_WITH_VIMEO_ID">
-                  <div class="vimeo-placeholder">
-                    <p>▶ Watch trailer on Vimeo</p>
-                    <p class="vimeo-hint">Replace data-vimeo-id with actual Vimeo video ID to embed</p>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-          </div>
-        </div><!-- /#tab-performance -->
-
-        <!-- COSTUME TAB PANEL -->
-        <div id="tab-costume" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-costume" hidden>
-          <div class="project-grid">
-            <article class="project-card">
-              <div class="project-card__media">
-                <img src="images/theatre/costume-01.jpg" alt="Costume design for Medea" loading="lazy"
-                  onerror="this.parentElement.classList.add('img-placeholder')" />
-              </div>
-              <div class="project-card__body">
-                <h3 class="project-card__title">Medea</h3>
-                <p class="project-card__meta">Costume Designer · 2023</p>
-                <p class="project-card__desc">Full costume design for a reimagined production of Medea, set in a contemporary industrial space. Hand-dyed and distressed fabrics.</p>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <div class="project-card__media">
-                <img src="images/theatre/costume-02.jpg" alt="Costume design for The Garden" loading="lazy"
-                  onerror="this.parentElement.classList.add('img-placeholder')" />
-              </div>
-              <div class="project-card__body">
-                <h3 class="project-card__title">The Garden</h3>
-                <p class="project-card__meta">Costume Designer · 2021</p>
-                <p class="project-card__desc">Costume and visual identity for an outdoor promenade performance, drawing from folklore and seasonal ritual.</p>
-              </div>
-            </article>
-          </div>
-        </div><!-- /#tab-costume -->
-
-        <!-- DÉCOR TAB PANEL -->
-        <div id="tab-decor" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-decor" hidden>
-          <div class="project-grid">
-            <article class="project-card">
-              <div class="project-card__media">
-                <img src="images/theatre/decor-01.jpg" alt="Décor for The Last Room" loading="lazy"
-                  onerror="this.parentElement.classList.add('img-placeholder')" />
-              </div>
-              <div class="project-card__body">
-                <h3 class="project-card__title">The Last Room</h3>
-                <p class="project-card__meta">Scenic &amp; Set Design · 2022</p>
-                <p class="project-card__desc">Set and décor design for a chamber theatre piece. Hand-built scenic elements combining found objects, paint, and texture.</p>
-              </div>
-            </article>
-          </div>
-        </div><!-- /#tab-decor -->
-
-        <!-- DIRECTION TAB PANEL -->
-        <div id="tab-direction" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-direction" hidden>
-          <div class="project-grid">
-            <article class="project-card">
-              <div class="project-card__media">
-                <img src="images/theatre/direction-01.jpg" alt="Direction — Ashes" loading="lazy"
-                  onerror="this.parentElement.classList.add('img-placeholder')" />
-              </div>
-              <div class="project-card__body">
-                <h3 class="project-card__title">Ashes</h3>
-                <p class="project-card__meta">Director · 2024</p>
-                <p class="project-card__desc">A new writing production exploring intergenerational trauma. Directed for the Edinburgh Festival Fringe, 2024.</p>
-                <!-- VIMEO EMBED EXAMPLE — REPLACE VIMEO_VIDEO_ID -->
-                <!--
-                  <div class="vimeo-embed">
-                    <iframe
-                      src="https://player.vimeo.com/video/VIMEO_VIDEO_ID?title=0&byline=0&portrait=0"
-                      width="100%"
-                      frameborder="0"
-                      allow="autoplay; fullscreen; picture-in-picture"
-                      allowfullscreen
-                      title="Ashes — trailer"
-                      loading="lazy"
-                    ></iframe>
-                  </div>
-                -->
-              </div>
-            </article>
-          </div>
-        </div><!-- /#tab-direction -->
+        <!-- Production gallery panels — populated by galleries.js -->
+        <div id="theatre-gallery-panels"></div>
 
       </div><!-- /.container -->
     </section>
@@ -737,6 +442,7 @@
   </div>
   <div class="lightbox-overlay" id="lightbox-overlay" hidden></div>
 
+  <script src="galleries.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
