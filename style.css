@@ -716,6 +716,18 @@ p {
   margin-bottom: 0.2rem;
 }
 
+.exhibition-item__title a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--color-text-muted);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
+}
+
+.exhibition-item__title a:hover {
+  text-decoration-color: currentColor;
+}
+
 .exhibition-item__venue {
   font-size: 0.85rem;
   letter-spacing: 0.08em;
