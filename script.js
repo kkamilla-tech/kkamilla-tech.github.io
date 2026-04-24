@@ -451,4 +451,20 @@
     });
   })();
 
+  /* ============================================================
+     8. EMAIL OBFUSCATION
+     Assembles mailto: links from data-user / data-domain
+     attributes on click, keeping raw addresses out of the HTML
+     source so scrapers cannot harvest them.
+     ============================================================ */
+  (function initEmailLinks() {
+    qsa('[data-user][data-domain]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+        var addr = el.dataset.user + '@' + el.dataset.domain;
+        window.location.href = 'mailto:' + addr;
+      });
+    });
+  })();
+
 })();
