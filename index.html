@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- REPLACE: Update the title with the artist's name -->
-  <title>Kamilla — Artist Portfolio</title>
-  <meta name="description" content="Portfolio of Kamilla — fine art, theatre, film, and exhibitions." />
+  <title>Kamilla Kurmanbekova — Scenic Designer &amp; Artist</title>
+  <meta name="description" content="Portfolio of Kamilla Kurmanbekova — scenic designer, educator, and creative director with 15+ years of experience in theatre, film, and fine art. MFA, Boston University." />
   <link rel="stylesheet" href="style.css" />
   <!-- Preconnect for Vimeo embeds -->
   <link rel="preconnect" href="https://player.vimeo.com" />
@@ -15,8 +14,7 @@
   <!-- ===================== NAVIGATION ===================== -->
   <header class="site-header" role="banner">
     <nav class="nav" aria-label="Main navigation">
-      <!-- REPLACE: Artist name in the logo -->
-      <a href="#about" class="nav-logo">Kamilla</a>
+      <a href="#about" class="nav-logo">Kamilla Kurmanbekova</a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -37,31 +35,29 @@
     <section id="about" class="section section--about" aria-labelledby="about-heading">
       <div class="container about-grid">
         <div class="about-text">
-          <!-- REPLACE: Artist name -->
-          <h1 class="about-name">Kamilla</h1>
-          <!-- REPLACE: Artist tagline or discipline -->
-          <p class="about-tagline">Fine Artist &amp; Theatre Maker</p>
-          <!-- REPLACE: Biography paragraph -->
+          <h1 id="about-heading" class="about-name">Kamilla Kurmanbekova</h1>
+          <p class="about-tagline">Scenic Designer &middot; Educator &middot; Creative Director</p>
           <p class="about-bio">
-            Kamilla is a multidisciplinary artist working at the intersection of fine art, 
-            performance, and film. Her practice spans drawing, painting, sculpture, and 
-            scenic design, with a particular interest in the texture of materials and the 
-            narrative potential of space. She has exhibited internationally and collaborated 
-            with theatre companies across Europe.
+            Kamilla Kurmanbekova is a scenic designer, educator, and creative director with
+            15+ years of international experience in theatre, film, and arts education.
+            MFA-trained at Boston University, she has designed sets, scenic painting, costumes,
+            and props for 40+ productions across the USA, Europe, and Central Asia — from
+            the Brooklyn Academy of Music and Dartmouth College to the National Opera and
+            Ballet Theater in Astana. Her fine art practice spans drawing, painting, sculpture,
+            and large-scale scenic painting, with work shown at the Venice Biennale and the
+            Prague Quadrennial.
           </p>
-          <!-- REPLACE: Artist statement -->
           <p class="about-statement">
-            "I am drawn to the quiet weight of things — the way light falls on a surface, 
-            the way a stage holds silence. My work is an attempt to make that stillness visible."
+            Teaching-artist, set designer, and production leader with a practice centered on
+            hands-on making, structured workflow systems, and mentoring emerging artists in
+            real production settings.
           </p>
-          <!-- REPLACE: CV link if needed -->
-          <a href="#" class="btn btn--outline" aria-label="Download CV (PDF)">Download CV</a>
+          <a href="cv/CV%20Kamilla%202026-2.pdf" class="btn btn--outline" target="_blank" rel="noopener noreferrer" aria-label="Download CV (PDF, opens in new tab)">Download CV</a>
         </div>
         <div class="about-portrait">
-          <!-- REPLACE: /images/about/portrait.jpg with the actual portrait image -->
           <img
             src="images/about/portrait.jpg"
-            alt="Portrait of Kamilla"
+            alt="Portrait of Kamilla Kurmanbekova"
             loading="lazy"
             class="portrait-img"
             onerror="this.parentElement.classList.add('portrait-placeholder')"
@@ -75,8 +71,7 @@
       <div class="container">
         <h2 id="fine-art-heading" class="section-title">Fine Art</h2>
         <p class="section-intro">
-          <!-- REPLACE: Short intro text for the Fine Art section -->
-          A selection of works across drawing, painting, sculpture, and scenic painting.
+          Works on paper, canvas, and in three dimensions — alongside large-scale scenic painting for stage and installation.
         </p>
 
         <!-- Fine Art Category Grid -->
@@ -94,8 +89,7 @@
             </div>
             <div class="category-card__body">
               <h3 class="category-card__title">Drawing</h3>
-              <!-- REPLACE: Short description for drawing -->
-              <p class="category-card__desc">Graphite, ink, and charcoal works exploring form, line, and the figure.</p>
+              <p class="category-card__desc">Graphite, ink, and charcoal works on paper — studies of form, line, the figure, and space.</p>
               <button
                 class="btn btn--text"
                 data-gallery="drawing"
@@ -117,8 +111,7 @@
             </div>
             <div class="category-card__body">
               <h3 class="category-card__title">Painting</h3>
-              <!-- REPLACE: Short description for painting -->
-              <p class="category-card__desc">Oil and acrylic paintings investigating colour, surface, and atmosphere.</p>
+              <p class="category-card__desc">Oil and acrylic paintings investigating colour, texture, and the language of surface.</p>
               <button
                 class="btn btn--text"
                 data-gallery="painting"
@@ -140,8 +133,7 @@
             </div>
             <div class="category-card__body">
               <h3 class="category-card__title">Scenic Painting</h3>
-              <!-- REPLACE: Short description for scenic painting -->
-              <p class="category-card__desc">Large-scale painted environments and backdrops for stage and installation.</p>
+              <p class="category-card__desc">Large-scale hand-painted environments, backdrops, and surfaces for stage productions and installations.</p>
               <button
                 class="btn btn--text"
                 data-gallery="scenic-painting"
@@ -190,7 +182,7 @@
       <div class="container">
         <h2 id="theatre-heading" class="section-title">Theatre</h2>
         <p class="section-intro">
-          Stage design, costume, and production work across international productions.
+          Set design, costume, scenic painting, and direction across 40+ productions in the USA, Europe, and Central Asia, 2005–present.
         </p>
 
         <!-- Production cards — populated by galleries.js -->
@@ -207,82 +199,78 @@
       <div class="container">
         <h2 id="film-heading" class="section-title">Film</h2>
         <p class="section-intro">
-          <!-- REPLACE: Short intro for film section -->
-          Short films, production design, and moving image work.
+          Art direction, production design, and costume for feature films and short films, 2006–2015.
         </p>
 
         <div class="film-grid">
 
-          <!--
-            FILM PROJECT CARD PATTERN — duplicate this block for each film.
-            REPLACE: image, title, description, Vimeo URL (VIMEO_VIDEO_ID)
-          -->
           <article class="film-card">
             <div class="film-card__video">
-              <!--
-                VIMEO EMBED — REPLACE VIMEO_VIDEO_ID with the actual ID from the Vimeo URL.
-                Example URL: https://vimeo.com/123456789 → ID is 123456789
-                REPLACE title attribute too.
-              -->
-              <div class="vimeo-embed vimeo-embed--film" data-vimeo-id="REPLACE_WITH_VIMEO_ID">
-                <div class="vimeo-placeholder">
-                  <p class="vimeo-placeholder__icon">▶</p>
-                  <p class="vimeo-placeholder__label">Watch on Vimeo</p>
-                  <p class="vimeo-hint">Replace data-vimeo-id with actual Vimeo video ID</p>
-                </div>
-                <!--
-                  Uncomment and replace VIMEO_VIDEO_ID:
-                  <iframe
-                    src="https://player.vimeo.com/video/VIMEO_VIDEO_ID?title=0&byline=0&portrait=0&color=ffffff"
-                    width="100%"
-                    frameborder="0"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowfullscreen
-                    title="REPLACE: Film title"
-                    loading="lazy"
-                  ></iframe>
-                -->
+              <div class="film-card__stills">
+                <img src="images/film/wounded-angel.jpg" alt="Still from Wounded Angel" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" class="film-still" />
               </div>
             </div>
             <div class="film-card__body">
-              <!-- REPLACE: Film title -->
-              <h3 class="film-card__title">The Drift</h3>
-              <!-- REPLACE: Year, role, duration -->
-              <p class="film-card__meta">2023 · Director &amp; Production Designer · 14 min</p>
-              <!-- REPLACE: Description -->
-              <p class="film-card__desc">A short film about a woman returning to her childhood home. Shot on 16mm, exploring the archaeology of domestic memory through light and texture.</p>
-            </div>
-          </article>
-
-          <article class="film-card">
-            <div class="film-card__video">
-              <div class="vimeo-embed vimeo-embed--film" data-vimeo-id="REPLACE_WITH_VIMEO_ID">
-                <div class="vimeo-placeholder">
-                  <p class="vimeo-placeholder__icon">▶</p>
-                  <p class="vimeo-placeholder__label">Watch on Vimeo</p>
-                  <p class="vimeo-hint">Replace data-vimeo-id with actual Vimeo video ID</p>
-                </div>
-              </div>
-            </div>
-            <div class="film-card__body">
-              <h3 class="film-card__title">Salt and Stone</h3>
-              <p class="film-card__meta">2022 · Production Designer · 22 min</p>
-              <p class="film-card__desc">An experimental documentary about coastal erosion and the traces people leave behind. Production design and art direction.</p>
+              <h3 class="film-card__title">Wounded Angel</h3>
+              <p class="film-card__meta">2013 · Costume Designer · dir. Emir Baigazin</p>
+              <p class="film-card__desc">Costume design for the internationally acclaimed feature film by director Emir Baigazin. Selected for major international film festivals.</p>
             </div>
           </article>
 
           <article class="film-card">
             <div class="film-card__video">
               <div class="film-card__stills">
-                <!-- REPLACE: Film stills gallery -->
-                <img src="images/film/film-stills-01.jpg" alt="Still from the film Elsewhere" loading="lazy"
+                <img src="images/film/boy-duck.jpg" alt="Still from Boy Duck" loading="lazy"
                   onerror="this.parentElement.classList.add('img-placeholder')" class="film-still" />
               </div>
             </div>
             <div class="film-card__body">
-              <h3 class="film-card__title">Elsewhere</h3>
-              <p class="film-card__meta">2021 · Set Design · 8 min</p>
-              <p class="film-card__desc">Set design for a silent short film screened at the BFI London Film Festival. Visual world built from found materials and natural light.</p>
+              <h3 class="film-card__title">Boy Duck</h3>
+              <p class="film-card__meta">2014 · Art Director · dir. A. Uzabaev</p>
+              <p class="film-card__desc">Art direction for this Kazakh feature film. Responsible for the full visual world of the production — sets, props, and on-set art direction.</p>
+            </div>
+          </article>
+
+          <article class="film-card">
+            <div class="film-card__video">
+              <div class="film-card__stills">
+                <img src="images/film/trace-on-the-water.jpg" alt="Still from Trace on the Water" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" class="film-still" />
+              </div>
+            </div>
+            <div class="film-card__body">
+              <h3 class="film-card__title">Trace on the Water</h3>
+              <p class="film-card__meta">2013 · Art Director · dir. T. Temenov</p>
+              <p class="film-card__desc">Art direction for Talgat Temenov's dramatic feature. Complete visual conception and on-set supervision of the production design.</p>
+            </div>
+          </article>
+
+          <article class="film-card">
+            <div class="film-card__video">
+              <div class="film-card__stills">
+                <img src="images/film/crush-test-aglae.jpg" alt="Still from Crush Test Aglae" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" class="film-still" />
+              </div>
+            </div>
+            <div class="film-card__body">
+              <h3 class="film-card__title">Crush Test Aglaé</h3>
+              <p class="film-card__meta">2015 · Costume Designer · dir. E. Gravel</p>
+              <p class="film-card__desc">Costume design for a French-language production directed by E. Gravel. Character-led costume work developed through close collaboration with the director.</p>
+            </div>
+          </article>
+
+          <article class="film-card">
+            <div class="film-card__video">
+              <div class="film-card__stills">
+                <img src="images/film/mai.jpg" alt="Still from Mai" loading="lazy"
+                  onerror="this.parentElement.classList.add('img-placeholder')" class="film-still" />
+              </div>
+            </div>
+            <div class="film-card__body">
+              <h3 class="film-card__title">Mai</h3>
+              <p class="film-card__meta">2009 · Art Director · dir. S. Abishev</p>
+              <p class="film-card__desc">Art direction for Sabit Abishev's feature. Set design, prop fabrication, and visual world construction for the complete production.</p>
             </div>
           </article>
 
@@ -295,76 +283,35 @@
       <div class="container">
         <h2 id="exhibitions-heading" class="section-title">Exhibitions</h2>
         <p class="section-intro">
-          <!-- REPLACE: Short intro for exhibitions -->
-          Selected solo and group exhibitions, 2018–present.
+          Selected exhibitions and international presentations, 2010–2013.
         </p>
 
         <ol class="exhibition-list" reversed>
 
-          <!--
-            EXHIBITION ITEM PATTERN — duplicate this block for each exhibition.
-            REPLACE: title, venue, city, year, description, photo
-          -->
-
-          <!-- REPLACE: Exhibition year, title, venue, city, description -->
           <li class="exhibition-item">
-            <div class="exhibition-item__year">2024</div>
+            <div class="exhibition-item__year">2013</div>
             <div class="exhibition-item__body">
-              <h3 class="exhibition-item__title">Weight of Absence</h3>
-              <p class="exhibition-item__venue">Galerie du Nord, Paris</p>
-              <!-- REPLACE: Optional description -->
-              <p class="exhibition-item__desc">Solo exhibition of new paintings and drawings examining loss and material memory.</p>
-              <!-- REPLACE: Optional exhibition photo -->
-              <!--
-                <figure class="exhibition-item__photo">
-                  <img src="images/exhibitions/exhibition-2024.jpg" alt="Weight of Absence installation view" loading="lazy" />
-                </figure>
-              -->
+              <h3 class="exhibition-item__title">Venice Biennale — Central Asian Pavilion</h3>
+              <p class="exhibition-item__venue">Venice, Italy</p>
+              <p class="exhibition-item__desc">Selected artist in the Central Asian Pavilion at the 55th Venice Biennale, one of the world's foremost international art exhibitions.</p>
             </div>
           </li>
 
           <li class="exhibition-item">
-            <div class="exhibition-item__year">2023</div>
+            <div class="exhibition-item__year">2011</div>
             <div class="exhibition-item__body">
-              <h3 class="exhibition-item__title">Material Witness</h3>
-              <p class="exhibition-item__venue">The Yard Gallery · Nottingham</p>
-              <p class="exhibition-item__desc">Group exhibition featuring sculpture and installation work from six artists across the UK and Eastern Europe.</p>
+              <h3 class="exhibition-item__title">Prague Quadrennial of Performance Design and Space</h3>
+              <p class="exhibition-item__venue">Prague, Czech Republic</p>
+              <p class="exhibition-item__desc">Presented scenographic work at the Prague Quadrennial, the world's largest exhibition of performance design and theatre architecture.</p>
             </div>
           </li>
 
           <li class="exhibition-item">
-            <div class="exhibition-item__year">2022</div>
+            <div class="exhibition-item__year">2010–2012</div>
             <div class="exhibition-item__body">
-              <h3 class="exhibition-item__title">Surface Tension</h3>
-              <p class="exhibition-item__venue">Open Eye Gallery · Liverpool</p>
-              <p class="exhibition-item__desc">A two-person show exploring the boundary between painting and photography.</p>
-            </div>
-          </li>
-
-          <li class="exhibition-item">
-            <div class="exhibition-item__year">2021</div>
-            <div class="exhibition-item__body">
-              <h3 class="exhibition-item__title">Threshold</h3>
-              <p class="exhibition-item__venue">Kunsthalle Wien · Vienna</p>
-              <p class="exhibition-item__desc">Group show examining states of transition. Exhibited two large-scale scenic paintings and a sound installation.</p>
-            </div>
-          </li>
-
-          <li class="exhibition-item">
-            <div class="exhibition-item__year">2020</div>
-            <div class="exhibition-item__body">
-              <h3 class="exhibition-item__title">New Voices</h3>
-              <p class="exhibition-item__venue">Flowers Gallery · London</p>
-              <p class="exhibition-item__desc">Annual survey of emerging artists. Selected works: graphite drawings and mixed-media works on paper.</p>
-            </div>
-          </li>
-
-          <li class="exhibition-item">
-            <div class="exhibition-item__year">2018</div>
-            <div class="exhibition-item__body">
-              <h3 class="exhibition-item__title">Degree Show</h3>
-              <p class="exhibition-item__venue">Royal Academy of Arts · London</p>
-              <p class="exhibition-item__desc">Graduation exhibition, BA Fine Art. Principal works: oil paintings and charcoal figure studies.</p>
+              <h3 class="exhibition-item__title">Incite Festival</h3>
+              <p class="exhibition-item__venue">New York, USA</p>
+              <p class="exhibition-item__desc">Recurring participation in the Incite Festival, New York — an interdisciplinary arts platform presenting performance, installation, and visual art.</p>
             </div>
           </li>
 
@@ -376,20 +323,19 @@
     <section id="contact" class="section section--contact" aria-labelledby="contact-heading">
       <div class="container contact-inner">
         <h2 id="contact-heading" class="section-title">Contact</h2>
-        <!-- REPLACE: Contact intro text -->
         <p class="contact-intro">
-          For inquiries about commissions, exhibitions, collaborations, or press, please get in touch.
+          For inquiries about productions, commissions, teaching, or collaborations, please get in touch.
         </p>
         <div class="contact-links">
-          <!-- REPLACE: email address -->
-          <a href="mailto:studio@kamilla.art" class="contact-link contact-link--email" aria-label="Send email to studio@kamilla.art">
-            studio@kamilla.art
+          <a href="mailto:kamilla8600@gmail.com" class="contact-link contact-link--email" aria-label="Send email to kamilla8600@gmail.com">
+            kamilla8600@gmail.com
           </a>
-          <!-- REPLACE: Instagram URL and handle -->
-          <a href="https://instagram.com/REPLACE_INSTAGRAM_HANDLE" class="contact-link contact-link--instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile (opens in new tab)">
-            @kamilla_art
+          <a href="tel:+16267016212" class="contact-link" aria-label="Call +1 626 701 6212">
+            +1 (626) 701-6212
           </a>
-          <!-- Add more social links as needed, following the same pattern -->
+          <a href="cv/CV%20Kamilla%202026-2.pdf" class="contact-link" target="_blank" rel="noopener noreferrer" aria-label="Download full CV (PDF, opens in new tab)">
+            Download Full CV
+          </a>
         </div>
         <!-- Optional: Visual contact form (not wired up — static only) -->
         <!--
@@ -421,8 +367,7 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
-      <!-- REPLACE: Artist name and year -->
-      <p>© 2024 Kamilla. All rights reserved.</p>
+      <p>© 2026 Kamilla Kurmanbekova. All rights reserved.</p>
       <p class="footer-built">Built with care.</p>
     </div>
   </footer>
