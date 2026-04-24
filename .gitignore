@@ -22,4 +22,7 @@ ehthumbs.db
 # Local env / secrets (never commit these)
 .env
 .env.*
+
+# Test suite — local only, not served on GitHub Pages
+tests/
 images_backup/*
