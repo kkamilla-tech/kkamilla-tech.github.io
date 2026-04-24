@@ -22,3 +22,4 @@ ehthumbs.db
 # Local env / secrets (never commit these)
 .env
 .env.*
+images_backup/*
